@@ -15,7 +15,7 @@ public class TestPlanetConstructor {
      *
      *  @param  expected    Expected double
      *  @param  actual      Double received
-     *  @param  label       Label for the 'test' case
+     *  @param  label   Label for the 'test' case
      */
     private static void checkEquals(double expected, double actual, String label) {
         if (expected == actual) {
@@ -29,7 +29,7 @@ public class TestPlanetConstructor {
      *  Checks whether or not two Strings are equal and prints the result.
      *  @param  expected    Expected String
      *  @param  actual      String received
-     *  @param  label       Label for the 'test' case
+     *  @param  label   Label for the 'test' case
      */
     private static void checkStringEquals(String expected, String actual, String label) {
         if (expected.equals(actual)) {
@@ -44,7 +44,7 @@ public class TestPlanetConstructor {
      *  variables correctly.
      */
     private static void checkPlanetConstructor() {
-        System.out.println("Checking first Planet constructor...");
+        System.out.println("Checking Planet constructor...");
 
         double xxPos = 1.0,
                yyPos = 2.0,
@@ -56,20 +56,18 @@ public class TestPlanetConstructor {
 
         Planet p = new Planet(xxPos, yyPos, xxVel, yyVel, mass, imgFileName);
 
-        checkEquals(xxPos, p.xxPos, "xxPos");
-        checkEquals(yyPos, p.yyPos, "yyPos");
-        checkEquals(xxVel ,p.xxVel, "xxVel");
-        checkEquals(yyVel, p.yyVel, "yyVel");
+        checkEquals(xxPos, p.xxPos, "x");
+        checkEquals(yyPos, p.yyPos, "y");
+        checkEquals(xxVel ,p.xxVel, "xVelocity");
+        checkEquals(yyVel, p.yyVel, "yVelocity");
         checkEquals(mass, p.mass, "mass");
         checkStringEquals(imgFileName, p.imgFileName, "path to image");
 
-        System.out.println("Checking second Planet constructor...");
-
         Planet pCopy = new Planet(p);
-        checkEquals(p.xxPos, pCopy.xxPos, "xxPos");
-        checkEquals(p.yyPos, pCopy.yyPos, "yyPos");
-        checkEquals(p.xxVel, pCopy.xxVel, "xxVel");
-        checkEquals(p.yyVel, pCopy.yyVel, "yyVel");
+        checkEquals(p.xxPos, pCopy.xxPos, "x");
+        checkEquals(p.yyPos, pCopy.yyPos, "y");
+        checkEquals(p.xxVel, pCopy.xxVel, "xVelocity");
+        checkEquals(p.yyVel, pCopy.yyVel, "yVelocity");
         checkEquals(p.mass, pCopy.mass, "mass");
         checkStringEquals(p.imgFileName, pCopy.imgFileName, "path to image");
     }

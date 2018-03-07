@@ -1,7 +1,7 @@
 import java.math.*;
 
 /**
- *  Tests calcForceExertedByXY
+ *  Tests calcPairwiseForce
  */
 public class TestCalcForceExertedByXY {
 

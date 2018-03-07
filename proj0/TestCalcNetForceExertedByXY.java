@@ -1,12 +1,12 @@
 import java.math.*;
 
 /**
- *  Tests calcNetForceExertedByXY
+ *  Tests setNetForce
  */
 public class TestCalcNetForceExertedByXY {
 
     /**
-     *  Tests calcNetForceExertedByXY.
+     *  Tests setNetForce.
      */
     public static void main(String[] args) {
         calcNetForceExertedByXY();
@@ -16,7 +16,7 @@ public class TestCalcNetForceExertedByXY {
      *
      *  @param  expected    Expected double
      *  @param  actual      Double received
-     *  @param  label       Label for the 'test' case
+     *  @param  label   Label for the 'test' case
      */
     private static void checkEquals(double expected, double actual, String label) {
         if (expected == actual) {
@@ -40,10 +40,10 @@ public class TestCalcNetForceExertedByXY {
     }
 
     /**
-     *  Checks the Planet class to make sure calcNetForceExertedByXY works.
+     *  Checks the Planet class to make sure setNetForce works.
      */
     private static void calcNetForceExertedByXY() {
-        System.out.println("Checking calcNetForceExertedByXY...");
+        System.out.println("Checking setNetForce...");
 
         Planet p1 = new Planet(1.0, 1.0, 3.0, 4.0, 5.0, "jupiter.gif");
         Planet p2 = new Planet(2.0, 1.0, 3.0, 4.0, 4e11, "jupiter.gif");

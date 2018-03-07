@@ -17,8 +17,8 @@ public class TestUpdate {
      *
      *  @param  expected    Expected double
      *  @param  actual      Double received
-     *  @param  label       Label for the 'test' case
-     *  @param  eps         Tolerance for the double comparison.
+     *  @param  label   Label for the 'test' case
+     *  @param  eps     Tolerance for the double comparison.
      */
     private static void checkEquals(double expected, double actual, String label, double eps) {
         if (Math.abs(expected - actual) <= eps * Math.max(expected, actual)) {
@@ -39,9 +39,9 @@ public class TestUpdate {
 
         p1.update(2.0, 1.0, -0.5);
 
-        checkEquals(3.4, p1.xxVel, "xxVel update()", 0.01);
-        checkEquals(3.8, p1.yyVel, "yyVel update()", 0.01);
-        checkEquals(7.8, p1.xxPos, "xxPos update()", 0.01);
-        checkEquals(8.6, p1.yyPos, "yyPos update()", 0.01);
+        checkEquals(7.8, p1.xxPos, "update()", 0.01);
+        checkEquals(8.6, p1.yyPos, "update()", 0.01);
+        checkEquals(3.4, p1.xxVel, "update()", 0.01);
+        checkEquals(3.8, p1.yyVel, "update()", 0.01);
     }
 }

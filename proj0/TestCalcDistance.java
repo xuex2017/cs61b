@@ -16,8 +16,8 @@ public class TestCalcDistance {
      *
      *  @param  expected    Expected double
      *  @param  actual      Double received
-     *  @param  label       Label for the 'test' case
-     *  @param  eps         Tolerance for the double comparison.
+     *  @param  label   Label for the 'test' case
+     *  @param  eps     Tolerance for the double comparison.
      */
     private static void checkEquals(double actual, double expected, String label, double eps) {
         if (Math.abs(expected - actual) <= eps * Math.max(expected, actual)) {
